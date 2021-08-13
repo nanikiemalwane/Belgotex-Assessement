@@ -1,10 +1,10 @@
 <?php
-	include ('db_connect.php');
+	
 
 	$db = mysqli_connect("localhost", "root", "", "todo") or die ("Failed" . mysqli_error($db));
 	
 
-		include('insert.php');
+	include('insert.php');
 	
 
 	//delete task  
@@ -184,8 +184,16 @@
 
 
 	<div class="form-style-9" style="max-width: 800px; border-color:green;">
+	<h4><u>Instructions</u></h4>
+		<ol style="align: left;">
+		<b>
+			<li>	
+				Editing is restricted for completed tasks		
+			</li>	
+		
+		</b>
+		</ol>
 					<ul>
-					
 					<form name="frmUser2" action="" method="POST">
 						<h3 style="color: #1876da;
 					font-size: 20px;
@@ -199,6 +207,7 @@
 					<table id="table_id2" class="table table-striped table-bordered">
 										<thead>
 											<tr>
+											<th></th>
 											<th></th>
 											<th></th>
 											<th>Task</th>
@@ -225,8 +234,11 @@
 														<a href="index.php?delete_task_id='.$row['task_id'].'" disabled onClick="confirmation();"  style="font-size:12px;background-color:white; border-color:red" class="btn btn-info btn-lg">
 															<span style="font-size:12pxpx;color:red" class="glyphicon glyphicon-trash"></span>  
 														</a>
+														<td>
+														<a href="edit.php?edit_task_stutus='.$row['task_id'].'&taskname='.$row['task_name'].'" disabled  onClick="return confirm(\'Are you sure you want to edit the task description?\');"  class="btn btn-warning">✎Edit Task</a>
+														</td>
 															</td>
-															<td contentEditable="false">'.$row["task_name"].'</td>
+															<td>'.$row["task_name"].'</td>
 															
 															<td>
 																<td">'.$row["task_status"].'</td>
