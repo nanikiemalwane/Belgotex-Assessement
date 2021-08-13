@@ -81,9 +81,7 @@
 
 </head>
 <body>
-<div align="center" style="padding-top: 90px;">
-					
-	<form class="form-style-9" action="index.php" method="POST">
+<form class="form-style-9" action="index.php" method="POST">
 		<ul>
 			<li>
 				<h3 style="color: #1876da;font-size: 20px;line-height: 25px;font-family: 'segoeui-bold';text-transform: uppercase;padding:15px 0px 10px 0px;display: block;">
@@ -97,15 +95,31 @@
 						<input type="submit" name="add" value="Add Task" onClick="return confirm('You sure this is something you want to do?');" />
 					</li>
 		</ul>
-		<?php if (isset($errors)) { ?>
-			<p><?php echo $errors; ?></p>
-		<?php } ?>
-						
-		</form>
+</form>
+		
 
 
 
 		<div class="form-style-9" style="max-width: 800px;border-color:red;">
+		<h4><u>Instructions</u></h4>
+		<ol style="align: left;">
+		<b>
+			<li>	
+				To delete a task , click the trash icon			
+			</li>	
+			<li>
+				To mark a task completed, click the tick icon
+			<li>
+				To edit the task description, click on "Edit Task"
+			</li>	
+			<li>
+				To delete multiple tasks, check the tasks and click the delete button 
+			</li>	
+			<li>
+				To update multiple task statuses to complete, check the tasks and click the update button 
+			</li>	
+</b>
+		</ol>
 			<ul>	
 				<form name="frmUser" action="" method="POST">
 					<h3 style="color: #1876da;font-size: 20px;line-height: 25px;font-family: 'segoeui-bold';text-transform: uppercase;padding:15px 0px 10px 0px;display: block;">Tasks</h3>
