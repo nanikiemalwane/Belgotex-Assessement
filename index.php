@@ -1,5 +1,5 @@
 <?php
-	
+	$db = include ('db_connect.php');
 
 	$db = mysqli_connect("localhost", "root", "", "todo") or die ("Failed" . mysqli_error($db));
 	
