@@ -5,7 +5,13 @@ On localhost, used WAMP server. Link for installation: (https://www.wampserver.c
 Database:
 CREATE DATABASE todo;
 
+hostname = "localhost";
+username = "root";
+password = "";
+dbname = "todo"
+
 Database Table:
+
 DROP TABLE IF EXISTS `tasks`;
 CREATE TABLE IF NOT EXISTS `tasks` (
   `task_id` int(11) NOT NULL AUTO_INCREMENT,
